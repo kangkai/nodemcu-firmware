@@ -12,7 +12,9 @@
 
 #include "c_types.h"
 #include "mem.h"
-#include "espconn.h"
+#include "lwip/err.h"
+#include "lwip/ip_addr.h"
+#include "lwip/app/espconn.h"
 
 #ifdef CLIENT_SSL_ENABLE
 unsigned char *default_certificate;
