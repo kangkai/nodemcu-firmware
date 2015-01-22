@@ -151,9 +151,9 @@ enum {
     STATION_GOT_IP
 };
 
-enum dhcp_status {
-	DHCP_STOPPED,
-	DHCP_STARTED
+enum dhcp_status{
+	DHCP_ENABLE,
+	DHCP_DISABLE
 };
 
 uint8 wifi_station_get_connect_status(void);
@@ -201,7 +201,7 @@ struct dhcps_lease {
 
 struct station_info * wifi_softap_get_station_info(void);
 void wifi_softap_free_station_info(void);
-uint8 wifi_station_get_ap_info(struct station_config config[]);
+bool wifi_station_get_ap_info(struct station_config config[]);
 
 bool wifi_softap_dhcps_start(void);
 bool wifi_softap_dhcps_stop(void);
